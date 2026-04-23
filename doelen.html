@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Leerdoelen — drie persoonlijke doelen voor Meesterschap 2025, Louise Monte.">
+  <title>Leerdoelen — Meesterschap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <!-- Navigatie -->
+  <nav class="nav">
+    <button id="hamburger" class="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="nav-links">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <a href="index.html" class="nav-logo">Meesterschap</a>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="weekly-nerds.html">Weekly Nerds</a></li>
+      <li><a href="doelen.html">Doelen</a></li>
+      <li><a href="reflectie.html">Reflectie</a></li>
+    </ul>
+
+    <button id="thema-knop" class="thema-knop" aria-label="Wissel thema">
+      <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+      </svg>
+      <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Inhoud -->
+  <main class="pagina">
+
+    <header class="pagina-kop fade">
+      <h1>Leerdoelen</h1>
+      <p>Drie concrete doelen die ik dit semester wil bereiken en waarop ik mezelf toets.</p>
+    </header>
+
+    <ol class="doelen-lijst">
+
+      <!-- Doel 1 -->
+      <li class="card fade">
+        <span class="doel-nummer">01</span>
+        <h2 class="doel-titel">Toegankelijkheid verankeren in mijn werkproces</h2>
+        <p>
+          Ik behandel toegankelijkheid te vaak als afrondende stap — iets wat je checkt
+          nadat het ontwerp af is. Dit semester wil ik het van het begin integreren:
+          semantische HTML als standaard, kleurcontrast als ontwerpcriterium en
+          toetsenbordbediening als testmoment bij elke sprint.
+        </p>
+        <p>
+          Ik gebruik WCAG 2.2 als referentie en test elke week minstens één flow met
+          alleen het toetsenbord.
+        </p>
+      </li>
+
+      <!-- Doel 2 -->
+      <li class="card fade">
+        <span class="doel-nummer">02</span>
+        <h2 class="doel-titel">Dieper begrip van CSS-architectuur opbouwen</h2>
+        <p>
+          Mijn CSS is functioneel maar ongestructureerd — ik overwrite veel en reken op
+          volgorde in plaats van logica. Dit semester wil ik werken met custom properties
+          als design tokens en een consistente naamgevingsconventie hanteren.
+        </p>
+        <p>
+          Het doel is dat ik aan het einde van het semester een eigen mini design system
+          kan bouwen én uitleggen waarom elke keuze is gemaakt.
+        </p>
+      </li>
+
+      <!-- Doel 3 -->
+      <li class="card fade">
+        <span class="doel-nummer">03</span>
+        <h2 class="doel-titel">Reflecteren als vanzelfsprekende gewoonte</h2>
+        <p>
+          Ik ben geneigd om door te werken zonder stil te staan bij wat ik leer.
+          Dit semester wil ik wekelijks reflecteren op wat ik heb gemaakt, wat me
+          heeft verrast en wat ik anders zou doen.
+        </p>
+        <p>
+          Het meetcriterium is simpel: aan het einde van elk blok heb ik een geschreven
+          reflectie die verder gaat dan "het ging goed".
+        </p>
+      </li>
+
+    </ol>
+
+    <hr>
+
+    <p style="text-align: center; color: var(--muted); margin-bottom: 20px;">Benieuwd hoe ik terugkijk op dit semester?</p>
+    <div style="text-align: center;">
+      <a href="reflectie.html" class="knop knop-vol">Lees mijn reflectie →</a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Louise Monte · Meesterschap · HvA</p>
+    <nav class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="weekly-nerds.html">Weekly Nerds</a>
+      <a href="reflectie.html">Reflectie</a>
+    </nav>
+  </footer>
+
+</body>
+</html>

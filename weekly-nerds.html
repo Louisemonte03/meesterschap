@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Weekly Nerds — samenvattingen van gastcolleges, Louise Monte."
+    />
+    <title>Weekly Nerds — Meesterschap</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigatie -->
+    <nav class="nav">
+      <button
+        id="hamburger"
+        class="hamburger"
+        aria-label="Menu openen"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <a href="index.html" class="nav-logo">Meesterschap</a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="weekly-nerds.html">Weekly Nerds</a></li>
+        <li><a href="doelen.html">Doelen</a></li>
+        <li><a href="reflectie.html">Reflectie</a></li>
+      </ul>
+
+      <button id="thema-knop" class="thema-knop" aria-label="Wissel thema">
+        <svg
+          class="icon-sun"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="4" />
+          <path
+            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+          />
+        </svg>
+        <svg
+          class="icon-moon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Inhoud -->
+    <main class="pagina">
+      <header class="pagina-kop fade">
+        <h1>Weekly Nerds</h1>
+        <p>
+          Elke week spreekt een professional over hun vakgebied. Dit zijn mijn
+          aantekeningen.
+        </p>
+      </header>
+
+      <ol class="week-lijst">
+
+        <li class="card fade">
+          <span class="week-label">4 Februari — Afwezig</span>
+          <h2>Kilian Valkhof</h2>
+          <p class="onderwerp">Stop using JavaScript for that</p>
+          <p>
+            Kilian Valkhof is een frontend developer en UX designer die zichzelf omschrijft als UX developer. Hij ziet het volledige plaatje van back-end tot visual design tot development. Kilian heeft Polypane gebouwd, een browser speciaal voor developers. Zijn talk heet "Stop using JavaScript for that: moving features from JS to CSS and HTML".
+          </p>
+          <h3>Interessante kennis &amp; inzichten</h3>
+          <p>
+            Native HTML-elementen vervangen door JS-oplossingen. Forced colors en de outline-truc: in plaats van <code>outline: none</code> gebruik je <code>outline-color: transparent</code>. Scroll-driven animaties waarbij je CSS-animaties koppelt aan scrollposities.
+          </p>
+          <h3>Ideeën &amp; connecties</h3>
+          <p>
+            Verbinding met performance: minder JavaScript betekent minder te downloaden. Dit sluit aan bij de bredere beweging van "less framework, more platform" in de webwereld. Ook een verbinding met accessibility, want native HTML-elementen zijn toegankelijker dan JavaScript-oplossingen die het vaak niet goed doen.
+          </p>
+        </li>
+
+        <li class="card fade">
+          <span class="week-label">19 Februari — Afwezig</span>
+          <h2>Peter Paul Koch</h2>
+          <p class="onderwerp">Geschiedenis van de browser, browser detect &amp; support detection</p>
+          <p>
+            Peter Paul Koch is een web developer, browser researcher en conferentie-organisator. Hij organiseerde en richtte evenementen op rondom code en het web.
+          </p>
+          <h3>Interessante kennis &amp; inzichten</h3>
+          <p>
+            Quirksmode.org was ooit een soort combinatie van MDN en browsercompatibiliteitsdata, lang voordat caniuse bestond.
+          </p>
+          <h3>Ideeën &amp; connecties</h3>
+          <p>—</p>
+        </li>
+
+        <li class="card fade">
+          <span class="week-label">4 Maart — Aanwezig</span>
+          <h2>Nils Binders</h2>
+          <p class="onderwerp">Creatief coderen vs. commercieel optimaliseren</p>
+          <p>
+            Nils Binders is designer/developer bij 9elements, een bureau in Bochum dat zich bezighoudt met communication design, web development en product development. In 2023 was hij op CSS Day, waar hij zich realiseerde dat je in dit vak vaak voor een keuze staat: creatief en experimenteel bouwen, of werken in een groot bedrijf waar alles draait om marketing en SEO. Zijn boodschap was dat het niet zo saai hoeft te zijn. Hij ziet Figma, ChatGPT en Tailwind als de "Holy Triangle of Boring" — tools die design steeds meer op elkaar laten lijken.
+          </p>
+          <h3>Interessante kennis &amp; inzichten</h3>
+          <p>
+            Hij maakt onderscheid tussen creatief coderen en commercieel optimaliseren, en vindt dat die twee niet per se tegenstrijdig hoeven te zijn. Animeren en écht meedenken zijn dingen die AI nog niet kan overnemen. Bij right-to-left design zit de uitdaging niet in CSS maar in UX. Hij is geen fan van video's op landingspagina's vanwege mobiele problemen en de last voor de klant — hij geeft de voorkeur aan <code>steps()</code> en view transitions.
+          </p>
+          <h3>Ideeën &amp; connecties</h3>
+          <p>
+            Zijn verhaal over CSS Day sluit aan bij de vraag hoe je creatief blijft binnen commerciële projecten. De discussie over video vs. animatie is relevant voor het Browser Tech project. <code>steps()</code> en view transitions zijn technieken om verder in te duiken.
+          </p>
+        </li>
+
+        <li class="card fade">
+          <span class="week-label">12 Maart — Afwezig</span>
+          <h2>Robbert Broersma</h2>
+          <p class="onderwerp">Toegankelijke formulieren &amp; NL Design System</p>
+          <p>
+            Robbert Broersma is design system lead bij het NL Design System, een open source project van en voor de Nederlandse overheid. Zijn sessie ging over hoe je de beste formulieren maakt voor het web, met digitale toegankelijkheid als centraal thema.
+          </p>
+          <h3>Interessante kennis &amp; inzichten</h3>
+          <p>
+            Het NL Design System werkt met design tokens: visuele eigenschappen waarin een eigen huisstijl kan worden uitgedrukt, zodat componenten van de ene organisatie ook inzetbaar zijn voor een andere. Formulieren zijn essentieel voor vrijwel alle digitale overheidsdiensten, en toegankelijkheid zit daarin van meet af aan ingebouwd.
+          </p>
+          <h3>Ideeën &amp; connecties</h3>
+          <p>
+            Relevant voor eigen werk aan formulieren in Browser Tech. Het NL Design System biedt kant-en-klare, goed geteste componenten als basis. Interessant om te bekijken hoe design tokens werken als systeem voor herbruikbaarheid zonder dat alles er hetzelfde uit ziet. Bron: <a href="https://nldesignsystem.nl" target="_blank">nldesignsystem.nl</a>.
+          </p>
+        </li>
+
+        <li class="card fade">
+          <span class="week-label">12 Maart — Afwezig</span>
+          <h2>Yolijn van der Kolk</h2>
+          <p class="onderwerp">—</p>
+          <h3>Interessante kennis &amp; inzichten</h3>
+          <p>—</p>
+          <h3>Ideeën &amp; connecties</h3>
+          <p>—</p>
+        </li>
+
+        <li class="card fade">
+          <span class="week-label">2 April — Aanwezig</span>
+          <h2>Rosa</h2>
+          <p class="onderwerp">Hacken, repareren en digitale duurzaamheid</p>
+          <p>
+            Rosa heeft een master gedaan in MFA Experimental Publishing (geluid, DIY/DIWO, collectief onderzoek). Ze is bezig met een project in Rotterdam rondom een prikbord-pagina. Een hacker is iemand die verder gaat dan standaard tech-gebruik — Rosa wil mensen inspireren om zelf dingen te bouwen, zoals een eigen CMS of een POC in Keynote.
+          </p>
+          <h3>Interessante kennis &amp; inzichten</h3>
+          <p>
+            <strong>Planned obsolescence</strong> — repareren wordt steeds moeilijker door producten die gemaakt zijn om stuk te gaan. Hacken en repareren werken daar actief tegen in.
+          </p>
+          <p>
+            <strong>De cloud</strong> — klinkt abstract maar is een enorm fysiek gebouw. Er is een groeiende afhankelijkheid van Amerikaanse big tech, als consument én als producent.
+          </p>
+          <p>
+            <strong>Eco-driven servers</strong> — Node9.org combineert technologie met ecologie: planten, een tuin en Arduino's aan elkaar gekoppeld.
+          </p>
+          <p>
+            <strong>Digitale duurzaamheid</strong> — bestaat mijn website nog over 10 jaar? Static site generators zoals 11ty hebben minder serverimpact, produceren leesbare code en hebben een grote community.
+          </p>
+          <h3>Ideeën &amp; connecties</h3>
+          <p>—</p>
+        </li>
+
+        <li class="card fade">
+          <span class="week-label">9 April — Aanwezig</span>
+          <h2>Johann Huijkman</h2>
+          <p class="onderwerp">Toegankelijkheid vanuit gebruikerservaring</p>
+          <p>
+            Johann heeft 16 jaar bij Q42 gewerkt en is overgestapt naar Stichting Accessibility, waar hij werkt als toegankelijkheidsexpert. In zijn sessie liet hij zien hoe mensen met een beperking het web ervaren. Zijn kernboodschap: <em>"Je hoort het pas, je ziet het pas als je doorhebt."</em>
+          </p>
+          <h3>Interessante kennis &amp; inzichten</h3>
+          <p>
+            <strong>WCAG basisprincipes</strong> — toegankelijkheid is gebouwd op vier pijlers: Perceivable, Operable, Understandable en Robust.
+          </p>
+          <p>
+            <strong>Alt-tekst</strong> — als een afbeelding belangrijk of relevant is, geef je het een beschrijvende alt-tekst. Elke afbeelding moet sowieso een alt-attribuut hebben, ook al is die leeg.
+          </p>
+          <p>
+            <strong>Gebruikerservaringen uit de praktijk</strong> — Johann liet drie video's zien: Martijn moet veel inzoomen en heeft schaalbaarheid, contrast en focusindicatoren nodig. Naduah is prikkelgevoelig en zet schermen op donker. Gideo wordt gestoord door drukke advertenties en wil snel en discreet zijn doel bereiken.
+          </p>
+          <h3>Ideeën &amp; connecties</h3>
+          <p>
+            Door je in de gebruiker te verplaatsen ontdek je drempels die je zelf nooit zou opmerken. Kleine dingen zoals een ontbrekende alt-tekst of focusrand kunnen voor iemand anders het verschil maken.
+          </p>
+        </li>
+
+      </ol>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Louise Monte · Meesterschap · HvA</p>
+      <nav class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="doelen.html">Doelen</a>
+        <a href="reflectie.html">Reflectie</a>
+      </nav>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Meesterschap — leerblog van Louise Monte, CMD student HvA."
+    />
+    <title>Meesterschap — Louise Monte</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <button id="hamburger" class="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="nav-links">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <a href="index.html" class="nav-logo">Meesterschap</a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="weekly-nerds.html">Weekly Nerds</a></li>
+          <li><a href="doelen.html">Doelen</a></li>
+          <li><a href="reflectie.html">Reflectie</a></li>
+        </ul>
+
+        <button id="thema-knop" class="thema-knop" aria-label="Wissel thema">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+          </svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+      </nav>
+      <section class="hero">
+        <div class="hero-grid">
+          <!-- Tekst -->
+          <div class="fade">
+            <p class="hero-subtitel">CMD · WDD · Meesterschap 2026</p>
+            <h1>
+              Hi, ik ben<br />
+              <span class="oranje">Louise&nbsp;Monte.</span>
+            </h1>
+            <p class="hero-bio">
+              Derdejaars student Communication &amp; Multimedia Design aan de
+              Hogeschool van Amsterdam. Hier documenteer ik mijn leerproces
+              reflecties, doelen en notities van de weekly-nerds.
+            </p>
+            <div class="hero-knoppen">
+              <a href="weekly-nerds.html" class="knop knop-vol"
+                >Weekly Nerds bekijken →</a
+              >
+              <a href="doelen.html" class="knop knop-leeg">Mijn doelen</a>
+            </div>
+          </div>
+          <div class="hero-illustratie fade" aria-hidden="true">
+            <img src="images/me.jpg" alt="" />
+          </div>
+        </div>
+
+        <!-- Info-balk onderaan -->
+        <dl class="hero-meta fade">
+          <div>
+            <dt>Opleiding</dt>
+            <dd>CMD</dd>
+          </div>
+          <div>
+            <dt>Jaar</dt>
+            <dd>Jaar 3 2026</dd>
+          </div>
+          <div>
+            <dt>Minor</dt>
+            <dd>Web Design & Development</dd>
+          </div>
+          <div>
+            <dt>School</dt>
+            <dd>Hogeschool van Amsterdam</dd>
+          </div>
+        </dl>
+      </section>
+    </header>
+    <main>
+      <section class="vakken-sectie">
+        <p class="sectie-label">Vakken</p>
+        <h2 class="sectie-titel">Mijn vakken dit jaar</h2>
+
+        <div class="vakken-grid">
+          <a href="web-apps.html" class="vak-kaart fade">
+            <img src="images/test img.png" alt="Web Apps From Scratch" />
+          </a>
+
+          <a href="css-to-the-rescue.html" class="vak-kaart fade">
+            <img src="images/test img.png" alt="Web Apps From Scratch" />
+          </a>
+
+          <a href="human-centered-design.html" class="vak-kaart fade">
+            <img src="images/test img.png" alt="Web Apps From Scratch" />
+          </a>
+
+          <a href="browser-technologies.html" class="vak-kaart fade">
+            <img src="images/test img.png" alt="Web Apps From Scratch" />
+          </a>
+
+          <a href="hackathon.html" class="vak-kaart fade">
+            <img src="images/test img.png" alt="Web Apps From Scratch" />
+          </a>
+
+          <a href="meesterproef.html" class="vak-kaart fade">
+            <img src="images/test img.png" alt="Web Apps From Scratch" />
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 Louise Monte · Meesterschap · HvA</p>
+      <nav class="footer-links">
+        <a href="weekly-nerds.html">Weekly Nerds</a>
+        <a href="doelen.html">Doelen</a>
+        <a href="reflectie.html">Reflectie</a>
+      </nav>
+    </footer>
+  </body>
+</html>
