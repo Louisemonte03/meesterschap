@@ -581,11 +581,13 @@ img {
   border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
 }
 
-.vak-kaart img {
+.vak-kaart img,
+.vak-kaart .vak-video {
   width: 100%;
   aspect-ratio: 2 / 1;
   object-fit: cover;
   background-color: var(--border);
+  display: block;
 }
 
 .vak-info {
@@ -697,7 +699,9 @@ hr {
   height: 2px;
   background: var(--text);
   border-radius: 2px;
-  transition: transform 0.2s, opacity 0.2s;
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
 }
 
 .hamburger[aria-expanded="true"] span:nth-child(1) {
