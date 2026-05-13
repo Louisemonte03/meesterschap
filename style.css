@@ -484,13 +484,6 @@ img {
   height: 100%;
   background-color: var(--accent);
   border-radius: 99px;
-  transform-origin: left;
-  transform: scaleX(0);
-  transition: transform 0.8s cubic-bezier(0, 0, 0.2, 1);
-}
-
-.voortgang-fill.zichtbaar {
-  transform: scaleX(1);
 }
 
 .voortgang-label {
@@ -615,28 +608,6 @@ img {
 @media (max-width: 560px) {
   .vakken-grid {
     grid-template-columns: 1fr;
-  }
-}
-
-/* --- Fade-in animatie --- */
-.fade {
-  opacity: 0;
-  transform: translateY(20px);
-  transition:
-    opacity 0.5s,
-    transform 0.5s;
-}
-
-.fade.zichtbaar {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fade {
-    opacity: 1;
-    transform: none;
-    transition: none;
   }
 }
 

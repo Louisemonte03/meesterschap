@@ -47,28 +47,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* --- Fade-in animaties bij scrollen --- */
-  const waarnemer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('zichtbaar');
-        waarnemer.unobserve(entry.target); /* stop na eerste keer */
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.fade').forEach(el => waarnemer.observe(el));
-
-  /* --- Voortgangsbalken animeren --- */
-  const balkWaarnemer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('zichtbaar');
-        balkWaarnemer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  document.querySelectorAll('.voortgang-fill').forEach(balk => balkWaarnemer.observe(balk));
 
 });
