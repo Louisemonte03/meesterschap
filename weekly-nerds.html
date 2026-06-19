@@ -124,14 +124,33 @@
             Geschiedenis van de browser, browser detect &amp; support detection
           </p>
           <p>
-            Peter Paul Koch is een web developer, browser researcher en
-            conferentie-organisator. Hij organiseerde en richtte evenementen op
-            rondom code en het web.
+            Peter Paul Koch weet meer over browsers dan wie dan ook. Hij heeft
+            jarenlang bijgehouden hoe browsers zich van elkaar onderscheiden, en
+            veel van die kennis is uiteindelijk terechtgekomen op platformen
+            zoals MDN en Can I Use. Zijn sessie ging over hoe browsers echt
+            werken en waarom browsercompatibiliteit zo'n eigen wereld is.
           </p>
           <h3>Interessante kennis &amp; inzichten</h3>
           <p>
-            Quirksmode.org was ooit een soort combinatie van MDN en
-            browsercompatibiliteitsdata, lang voordat caniuse bestond.
+            Ik had eigenlijk nooit nagedacht over wat een browser nou precies
+            is. Het voelt als één ding maar onder de motorkap zitten er meerdere
+            onderdelen in: een rendering engine, een JavaScript engine en een
+            parser. Dat gaf me een heel ander beeld van iets wat ik dagelijks
+            gebruik.
+          </p>
+          <p>
+            Het verschil tussen <code>defer</code> en <code>async</code> bij
+            scripts was ook zo'n moment van eindelijk begrijpen. Ik had die
+            attributen vaker gezien maar altijd genegeerd. Nu weet ik dat
+            JavaScript zonder die attributen gewoon de hele pagina kan ophouden,
+            en dat je dat dus bewust moet aanpakken.
+          </p>
+          <h3>Ideeën &amp; connecties</h3>
+          <p>
+            Ik test altijd in Chrome en dat is eigenlijk gewoon lui. Na deze
+            sessie wil ik dat veranderen en vaker in andere browsers kijken. En
+            <code>defer</code> gebruik ik voortaan standaard als ik scripts
+            inlaad.
           </p>
         </li>
 
@@ -174,41 +193,41 @@
 
         <li class="card">
           <span class="week-label">12 Maart · Afwezig</span>
-          <h2>Robbert Broersma</h2>
+          <h2>Robbert Broersma &amp; Yolijn van der Kolk</h2>
           <p class="onderwerp">
-            Toegankelijke formulieren &amp; NL Design System
+            Toegankelijke formulieren met het NL Design System
           </p>
           <p>
-            Robbert Broersma is design system lead bij het NL Design System, een
-            open source project van en voor de Nederlandse overheid. Zijn sessie
-            ging over hoe je de beste formulieren maakt voor het web, met
-            digitale toegankelijkheid als centraal thema.
+            Robbert en Yolijn werken bij Frameless en zijn allebei nauw
+            betrokken bij het NL Design System. Hun sessie draaide om
+            formulieren en niet als losstaand element, maar als een complete
+            gebruikerservaring van begin tot eind.
           </p>
           <h3>Interessante kennis &amp; inzichten</h3>
           <p>
-            Het NL Design System werkt met design tokens: visuele eigenschappen
-            waarin een eigen huisstijl kan worden uitgedrukt, zodat componenten
-            van de ene organisatie ook inzetbaar zijn voor een andere.
-            Formulieren zijn essentieel voor vrijwel alle digitale
-            overheidsdiensten, en toegankelijkheid zit daarin van meet af aan
-            ingebouwd.
+            Wat me opviel is hoe veel details er komen kijken bij iets wat
+            ogenschijnlijk simpel is. Een <code>fieldset</code> met
+            <code>legend</code> klinkt basic, maar zonder die structuur weet een
+            screenreader niet hoe velden bij elkaar horen. Hetzelfde geldt voor
+            labels: die horen via <code>for</code> en <code>id</code> aan een
+            input gekoppeld te zijn, niet als losse tekst ernaast.
+          </p>
+          <p>
+            Foutmeldingen zijn iets waar ik eerder te makkelijk over dacht. Rood
+            kleuren is niet genoeg, je hebt ook tekst, een icoon én
+            <code>aria-describedby</code> nodig zodat de foutmelding écht aan
+            het veld gekoppeld is. En focus indicators: die mogen best
+            schreeuwen. Een onzichtbare focusrand is voor toetsenbordgebruikers
+            net zo vervelend als een knop zonder label.
           </p>
           <h3>Ideeën &amp; connecties</h3>
           <p>
-            Relevant voor eigen werk aan formulieren in Browser Tech. Het NL
-            Design System biedt kant-en-klare, goed geteste componenten als
-            basis. Interessant om te bekijken hoe design tokens werken als
-            systeem voor herbruikbaarheid zonder dat alles er hetzelfde uit
-            ziet. Bron:
-            <a href="https://nldesignsystem.nl" target="_blank"
-              >nldesignsystem.nl</a
-            >.
+            Na deze sessie ben ik anders naar mijn Browser Tech formulier gaan
+            kijken. Toetsenbord en screenreader testen is iets wat ik standaard
+            in mijn proces wil opnemen, niet achteraf. De
+            <code>aria-describedby</code> koppeling was precies het soort detail
+            dat ik over het hoofd zou zien.
           </p>
-        </li>
-
-        <li class="card">
-          <span class="week-label">12 Maart · Afwezig</span>
-          <h2>Yolijn van der Kolk</h2>
         </li>
 
         <li class="card">
@@ -282,12 +301,563 @@
             alt-tekst of focusrand kunnen voor iemand anders het verschil maken.
           </p>
         </li>
+
+        <li class="card">
+          <span class="week-label">17 April · Aanwezig</span>
+          <h2>The Web You Want — Dag 1</h2>
+          <p class="onderwerp">
+            Zeven sprekers over de toekomst, waarden en grenzen van het web
+          </p>
+
+          <h3>Marleen Stikker — Regulatie als innovatiekracht</h3>
+          <p>
+            Marleen Stikker is directeur en mede-oprichter van Waag, een
+            cultureel onderzoeksinstituut in Amsterdam. Ze richtte in 1994 ook
+            De Digitale Stad op: een virtuele publieke ruimte die iedereen via
+            een modem kon betreden en die geldt als een vroeg voorbeeld van
+            sociale media, lang voordat dat woord bestond.
+          </p>
+          <p>
+            Haar centrale punt: regulatie is geen rem op innovatie, maar een
+            manier om waarden te borgen. Niet om te beperken, maar om te bewaken
+            wat het web de moeite waard maakt. Ik vond dat een overtuigende
+            redenering. Als je niets vastlegt, bepaalt de markt wat het web
+            wordt — en dat zien we al. Door bewuste keuzes te maken over wat wél
+            mag en wat niet, houd je ruimte voor vrijheid zonder dat die
+            vrijheid ten koste gaat van veiligheid of inclusiviteit.
+          </p>
+
+          <h3>Sanne 't Hooft — Studentenwerk in het publiek</h3>
+          <p>
+            Sanne 't Hooft is docent aan de opleiding en begeleidde een sessie
+            waarin ze studentenwerk liet zien — waaronder mijn eigen
+            Octodad-website die ik voor het CSS-vak heb gemaakt. Het was een
+            rare maar motiverende ervaring om je eigen werk voor een publiek te
+            zien en de reacties te horen. Mensen reageerden positief, wat altijd
+            prettig is, maar het deed me ook nadenken over hoe anders je naar je
+            eigen werk kijkt als het opeens buiten de veilige context van een
+            beoordeling belandt.
+          </p>
+
+          <h3>Vasilis van Gemert — The web is for everyone</h3>
+          <p>
+            Vasilis van Gemert is docent aan de opleiding en een
+            toegankelijkheidsadvocaat die regelmatig spreekt over inclusief
+            ontwerpen. Zijn talk draaide om één zin die hij drie keer herhaalde,
+            steeds met een andere betekenis:
+            <em>The web is for everyone</em>.
+          </p>
+          <p>
+            Eerst als recht om te <strong>bouwen</strong>: iedereen moet het web
+            kunnen maken, niet alleen grote bedrijven of mensen met een dure
+            opleiding. Dan als recht om te <strong>gebruiken</strong>: het web
+            moet werken voor mensen met een beperking, op trage verbindingen, op
+            oude apparaten. En tot slot als recht om te
+            <strong>publiceren</strong>: iedereen mag iets bijdragen. Zijn
+            oplossing voor al drie: gebruik de kracht van HTML, want HTML kan
+            inmiddels meer dan ooit. Dat is een punt dat ik merk in mijn eigen
+            werk — native HTML-elementen doen veel meer dan ik standaard
+            gebruik.
+          </p>
+
+          <h3>Hidde de Vries — Het web als collectief eigendom</h3>
+          <p>
+            Hidde de Vries is toegankelijkheidsspecialist en werkt aan
+            webstandaarden voor de Nederlandse overheid. Hij is betrokken bij de
+            W3C Advisory Board en heeft jarenlang bij WAI gewerkt aan
+            toegankelijkheidsrichtlijnen.
+          </p>
+          <p>
+            Hij legde een reeks eigenschappen neer die het web zou moeten
+            hebben: voor ons werken, voor iedereen toegankelijk zijn, geen
+            toestemming nodig hebben, onderhoudbaar, leuk en van ons zijn. Maar
+            wat me het meest bleef hangen was een feit dat hij terloops noemde:
+            als het internet een land zou zijn, zou het de dertiende grootste
+            uitstoter van CO₂ ter wereld zijn. Dat wist ik eigenlijk wel, maar
+            zo concreet en direct had ik het nog niet gehoord. Het zette me aan
+            het denken over de omvang van wat ik bouw. Moet een website zoveel
+            laden? Hoeveel scripts, fonts en afbeeldingen zijn echt nodig?
+          </p>
+
+          <h3>Sanne Peters — Een vriendelijker web</h3>
+          <p>
+            Sanne Peters richtte haar talk op hoe het web vriendelijker kan
+            zijn, omdat technologie steeds meer een plek inneemt in ons leven
+            die we niet altijd zelf kiezen. Ze pleit voor een web dat optioneel,
+            makkelijk, veilig en leuk is — in plaats van opdringerig of
+            verplicht. Persoonlijk vond ik dit minder aansprekend dan de andere
+            talks, maar de gedachte dat je ook vanuit de bedrijfskant
+            verandering kunt bewerkstelligen zonder de gebruiker te dwingen,
+            vond ik wel een interessante invalshoek.
+          </p>
+
+          <h3>Justus Sturkenboom — Filosofie achter vier woorden</h3>
+          <p>
+            Justus Sturkenboom is frontend developer en docent. Ik had van hem
+            eigenlijk een technische talk verwacht, maar hij pakte het anders
+            aan: hij ontleedde de zin <em>"The Web You Want"</em> woord voor
+            woord. <strong>"The"</strong> is bepalend en veronderstelt dat er
+            iets bestaat wat iedereen kent. <strong>"Web"</strong> is een
+            netwerk — lichtgewicht maar sterk, met een centrum, net als een
+            spinnenweb. <strong>"You"</strong> is breed genoeg om iedereen te
+            omvatten, maar niet zo wijd als "they".
+            <strong>"Want"</strong> drukt een actief verlangen uit. Ik vond het
+            een slimme oefening, maar miste de technische diepgang die ik had
+            verwacht.
+          </p>
+
+          <h3>Niels Leenheer — Als je het kan bedenken, kan je het bouwen</h3>
+          <p>
+            Niels Leenheer is maker van HTML5test.com en staat bekend om zijn
+            creatieve, soms bewust nutteloze projecten. Hij bouwde DOOM in CSS —
+            elke muur, vloer en vijand is een
+            <code>&lt;div&gt;</code> in 3D-ruimte met CSS transforms. Zijn
+            filosofie: als het leuk is om te maken, is dat reden genoeg.
+          </p>
+          <p>
+            In zijn talk vertelde hij over projecten als een ronde klok die
+            altijd rechtop staat ongeacht hoe je het scherm draait, en een
+            oscilloscoop waarop hij met CSS-animaties een klok heeft getekend —
+            die hij uiteindelijk bijna in brand heeft gezet. Origineel wilde hij
+            lasers gebruiken voor een project; dat apparaat was te duur. Later
+            deed hij het alsnog.
+          </p>
+          <p>
+            Dit was voor mij de beste talk van de dag. Niet omdat het de meest
+            inhoudelijk zware was, maar omdat het het meest inspirerende was. De
+            quote <em>"If you can think it, you can build it"</em> klinkt
+            simpel, maar het zit er wel in. Je moet soms alleen het juiste
+            medium vinden. Code heeft geen vaste vorm — en dat is precies wat
+            het interessant maakt.
+          </p>
+
+          <h3>Terugblik op de dag</h3>
+          <p>
+            De rode draad door de dag was eigenlijk best duidelijk: het web is
+            van iedereen, maar die belofte moet je actief verdedigen — via
+            regels, via toegankelijkheid, via duurzaamheid, en via de vrijheid
+            om gewoon iets leuks te bouwen. Niels Leenheer en Vasilis van Gemert
+            waren voor mij de sterkste sprekers: de een inspirerend, de ander
+            overtuigend. Het CO₂-punt van Hidde de Vries blijft me ook bij — het
+            is iets waar ik in toekomstige projecten actiever op wil letten.
+          </p>
+        </li>
+
+        <li class="card">
+          <span class="week-label">Q42 · Aanwezig</span>
+          <h2>Q42</h2>
+          <p class="onderwerp">Design systems, AI en toegankelijkheid</p>
+          <p>
+            Q42 is een digitaal bureau met kantoren in Amsterdam en Rotterdam.
+            Ze bouwen digitale producten die het leven van mensen slimmer, beter
+            en leuker maken voor klanten zoals KLM, HEMA, De Mol, Hitster,
+            Philips, het Rijksmuseum en de Efteling. Onder andere de backend van
+            Philips Hue is van hun hand.
+          </p>
+          <h3>Flora design system</h3>
+          <p>
+            Voordat Q42 aan een design system begint, doen ze altijd een
+            <strong>design system assessment</strong> — een gestructureerde
+            verkenning, vergelijkbaar met hoe Figma styles zijn opgebouwd.
+            Daarna volgt een roadmap met opties.
+          </p>
+          <p>
+            Belangrijkste inzicht:
+            <em>"Design systems zijn geen deliverables maar conversaties."</em>
+            Je moet ze blijven voeren om het systeem te laten groeien. Het
+            product dat overblijft is het resultaat van die doorlopende
+            afstemming.
+          </p>
+          <h3>Werken met AI</h3>
+          <p>
+            Het landschap van design en development is sterk aan het veranderen.
+            De eisen om te kunnen bouwen zijn niet meer hetzelfde — maar in
+            verandering liggen ook kansen.
+          </p>
+          <p>
+            <strong>Wanneer gebruik je AI?</strong> Bij debugging, rubber
+            ducking (sparren), herhaaldelijk werk, controle op abstracte
+            onderwerpen en boring stuff. Content generatie en documentatie gaan
+            veel sneller met AI.
+          </p>
+          <p>
+            <strong>Wanneer gebruik je AI niet?</strong> Voor creativiteit, als
+            je zelf niet weet wat er gebeurt, of voor fun stuff. Behandel AI als
+            een peuter: wees heel duidelijk in wat je wil. En blijf zelf de
+            controle houden — je moet weten wat je online zet.
+          </p>
+          <h3>Toegankelijkheid</h3>
+          <p>
+            Hoe zorg je dat toegankelijkheid hoog op de prioriteitenlijst komt
+            bij grote klanten? Q42's aanpak:
+          </p>
+          <p>
+            <strong>Make the boundary as small as possible</strong> — hergebruik
+            wat er al is en verzin het wiel niet opnieuw. Verwijder elke smoes.
+            Koppel toegankelijkheid aan de bedrijfsstrategie, overtuig
+            leadership en meet succes.
+          </p>
+          <h3>Ideeën &amp; connecties</h3>
+          <p>
+            De gedachte dat een design system een <em>gesprek</em> is en geen
+            eindproduct sluit mooi aan bij agile werken: je levert nooit "af",
+            je blijft itereren. De AI-tips (wanneer wel/niet gebruiken) zijn
+            direct toepasbaar in mijn eigen workflow.
+          </p>
+        </li>
+
+        <li class="card">
+          <span class="week-label">21 Mei · Aanwezig</span>
+          <h2>Hans de Zwart</h2>
+          <p class="onderwerp">Privacy op het internet</p>
+          <p>
+            Hans de Zwart was directeur van Bits of Freedom, een Nederlandse
+            organisatie die opkomt voor digitale burgerrechten zoals vrijheid
+            van communicatie en privacy op het internet. Hij schrijft regelmatig
+            over technologie en maatschappij in kranten als de Volkskrant, NRC
+            en De Correspondent.
+          </p>
+          <h3>Interessante kennis &amp; inzichten</h3>
+          <p>
+            Hans opende met de stelling <em>"Ik heb niks te verbergen"</em> —
+            een zin die veel mensen zeggen, maar die genuanceerder is dan hij
+            lijkt. Want niks te verbergen hebben betekent niet dat je alles
+            zomaar deelt. Toch zijn er situaties waarin iemand jouw gegevens
+            zonder toestemming mag inzien: bij het uitvoeren van een
+            overeenkomst (zoals een online aankoop), bij een vitaal belang, of
+            bij een gerechtvaardigd belang. Daarvoor geldt altijd het principe
+            van <strong>doelbinding</strong>: data mag alleen gebruikt worden
+            voor het doel waarvoor het verzameld is.
+          </p>
+          <p>
+            Iedereen heeft daarnaast rechten over zijn eigen gegevens — je kunt
+            ze inzien, corrigeren, aanvullen en verwijderen. Hans liet ook zien
+            hoe snel het misgaat in de praktijk: een nieuw Chrome-account, nu.nl
+            bezoeken, en binnen een paar minuten doet de site al 183 verzoeken
+            naar externe pagina's voor reclame en tracking.
+          </p>
+          <p>
+            Vanuit ontwerpperspectief noemde hij acht strategieën voor
+            privacyvriendelijk design:
+            <strong
+              >Inform, Control, Minimise, Separate, Abstract, Hide,
+              Demonstrate</strong
+            >
+            en <strong>Enforce</strong>. Niet elk bedrijf past ze even
+            consequent toe, maar als developer ben je degene die die keuze
+            maakt.
+          </p>
+          <h3>Ideeën &amp; connecties</h3>
+          <p>
+            Ik was me er al redelijk van bewust dat browsers en websites veel
+            meer over je weten dan je doorhebt. Maar de voorbeelden die Hans
+            liet zien maakten het concreter — en daarmee ook ongemakkelijker.
+            Zelf sta ik nog steeds achter de stelling dat ik niks te verbergen
+            heb, maar ik ga er bewuster over nadenken wat ik precies deel. Want
+            je deelt soms meer dan je denkt, ook als je niks te verbergen hebt.
+          </p>
+          <p>
+            Voor mijn eigen werk is de acht-strategieënlijst iets om te bewaren.
+            Welke gegevens vraag ik op, waarvoor gebruik ik ze, en hoe
+            transparant ben ik daarover naar de gebruiker? Dat zijn vragen die
+            ik eerder pas achteraf stelde, maar die eigenlijk al in het
+            ontwerpproces thuis horen.
+          </p>
+        </li>
+
+        <li class="card">
+          <span class="week-label">4 Juni · Aanwezig</span>
+          <h2>De Voorhoede</h2>
+          <p class="onderwerp">
+            Een kijkje in het dagelijks werk van een webbureau
+          </p>
+          <p>
+            De Voorhoede is een ontwikkelbureau met kantoren in Amsterdam en
+            Delft. Ze omschrijven zichzelf niet als een full-service agency maar
+            als een echte development club — gespecialiseerd in frontend met
+            Vue.js, React, Svelte en Nuxt, en met een sterke focus op
+            toegankelijkheid en webstandaarden.
+          </p>
+
+          <h3>Marleen — Werken bij De Voorhoede</h3>
+          <p>
+            Marleen gaf een kijkje in haar dagelijkse werk als developer bij De
+            Voorhoede. Ze heeft onder andere een website gebouwd voor een
+            techno-festival — zelf gebouwd, niet ontworpen — waarbij de opzet zo
+            is ingericht dat de klant daarna zelf zijn content kan invullen
+            zonder tussenkomst van een developer. Dat principe van een
+            overdraagbaar CMS vond ik praktisch en slim.
+          </p>
+          <p>
+            Ze vertelde ook over klantcontact: hoe mails soms vaag zijn en je
+            zelf moet reconstrueren wat er eigenlijk bedoeld wordt. Haar aanpak
+            om gifs te gebruiken in communicatie — om stappen of bedoelde
+            interacties te verduidelijken — vond ik een leuke oplossing. Ik deed
+            vroeger iets vergelijkbaars met screenshots en rode pijlen, maar een
+            gif is compacter en duidelijker. Naast het bouwen geeft ze ook code
+            classes en schrijft ze blogposts die soms op LinkedIn worden
+            geplaatst.
+          </p>
+          <p>
+            Wat ik waardeerde aan deze talk: het was geen presentatie over een
+            nieuwe techniek, maar over hoe het beroep er in de praktijk echt
+            uitziet. Dat het niet alleen code schrijven is, maar ook
+            communiceren, uitleggen, zelf plug-ins bouwen en kennis delen. Dat
+            soort variatie in het werk is iets waar ik me goed bij kan
+            voorstellen.
+          </p>
+
+          <h3>Peter — NL Design System en toegankelijkheid als standaard</h3>
+          <p>
+            Peter is gespecialiseerd in toegankelijkheid en werkt met het NL
+            Design System, een gedeeld ontwerpsysteem voor Nederlandse
+            overheidswebsites. Zijn werkwijze: bij elk ticket plant hij
+            standaard 20% extra tijd in om het resultaat toegankelijk te maken —
+            en dat communiceert hij niet naar de klant. Het zit gewoon in zijn
+            proces.
+          </p>
+          <p>
+            Het hoofdverhaal van zijn talk ging over een component dat hij nodig
+            had maar dat nog niet volledig aan zijn eisen voldeed. In plaats van
+            een compromis te sluiten, maakte hij een afspraak met het andere
+            bedrijf: hij voegde de ontbrekende functionaliteit zelf toe en
+            maakte het meteen ook toegankelijk. Dat vond ik een slimme manier
+            van samenwerken — open source in de praktijk, in plaats van alleen
+            in theorie.
+          </p>
+          <p>
+            Aan het einde introduceerde hij <strong>design tokens</strong>: een
+            systeem waarbij de CSS-waarden (kleuren, spacing, typografie) los
+            staan van de styling zelf. Je vult de tokens in, en de hele visuele
+            laag past zich aan. Dat had ik nog niet eerder concreet gezien en
+            het is iets wat ik later zeker wil uitproberen — al is het in mijn
+            huidige projecten nog niet direct toepasbaar.
+          </p>
+
+          <h3>Bas — Offline First</h3>
+          <p>
+            Mobile first ken ik, maar <strong>offline first</strong> had ik nog
+            niet eerder als ontwerpprincipe gehoord. Bas werkt aan een app voor
+            liftinspecties — en liften hebben nou eenmaal geen betrouwbaar
+            signaal. De vraag is dus niet of je internet hebt, maar hoe de app
+            zich gedraagt als je het niet hebt.
+          </p>
+          <p>
+            Zijn aanpak: zorg dat gecachte content altijd beschikbaar is, sla
+            wijzigingen lokaal op via localStorage en stuur ze op zodra er weer
+            verbinding is. Maar daarin schuilt ook het interessantste probleem:
+            wat als twee inspecteurs tegelijk hetzelfde onderdeel hebben
+            aangepast en allebei hun data opsturen? Wie heeft voorrang? Bas lost
+            dat op met een soort comment-systeem — latere inspecties worden niet
+            overschreven maar gestapeld, zodat je een tijdlijn krijgt van wie
+            wat wanneer heeft gecontroleerd. Een elegant idee voor een echt
+            weerbarstig probleem.
+          </p>
+          <p>
+            Dit was voor mij de meest verrassende talk van de dag. Ik heb
+            weleens nagedacht over wat er gebeurt als een bestand niet laadt,
+            maar niet over wat er gebeurt als er helemaal geen verbinding is.
+            Het zet je anders na te denken over de architectuur van een app —
+            niet als iets wat altijd online is, maar als iets wat ook offline
+            zijn werk moet kunnen doen.
+          </p>
+        </li>
+
+        <li class="card">
+          <span class="week-label">10 Juni · Aanwezig</span>
+          <h2>The Web You Want — Dag 2</h2>
+          <p class="onderwerp">
+            Zeven sprekers over AI, animatie, sfeer, duurzaamheid en de
+            geschiedenis van het web
+          </p>
+
+          <h3>Léonie Watson — I love AI</h3>
+          <p>
+            Léonie Watson is blind en liet zien hoe AI voor haar een essentieel
+            hulpmiddel is geworden bij het navigeren van het web. Ze gebruikt het
+            dagelijks om grote hoeveelheden content snel door te nemen,
+            productinformatie op te halen, nauwkeurige beschrijvingen te
+            krijgen van objecten en artikelen in haar omgeving, en om websites
+            te verkennen wanneer ze kleding of andere producten wil kopen. Ze
+            vergeleek AI met een vriend die met haar mee de winkelstraat in
+            gaat. Wat opviel: AI omschreef producten vaak beter dan de websites
+            zelf.
+          </p>
+          <p>
+            Haar kritische punt was dat AI momenteel de gaten dicht die
+            developers open laten — gaten die er eigenlijk niet zouden moeten
+            zijn. Ze pleit er niet voor dat AI het werk van developers overneemt,
+            maar dat het juist helpt bij de onderdelen die developers vaak
+            overslaan, zoals toegankelijkheid. Denk aan alt-teksten voor
+            productafbeeldingen of het scanbaar maken van pagina's voor
+            screenreaders. Léonie wil een web dat altijd en overal bereikbaar
+            is, met goede labels, leesbare tekst en zinvolle beschrijvingen.
+          </p>
+          <p>
+            Het was bijzonder om iemand zo positief over AI te horen praten,
+            terwijl de discussie in onze opleiding vaak draait om wat AI van
+            developers wegneemt. Voor Léonie is het precies andersom: AI vult
+            aan wat er mist. Dat gezegd hebbende, zou het ideaal zijn als die
+            aanvulling al ingebakken zat in het ontwerp zelf — en niet pas
+            achteraf door een AI-tool gerepareerd hoeft te worden.
+          </p>
+
+          <h3>Cyd Stumpel — Prefers Enhanced Motion</h3>
+          <p>
+            Cyd is bekend om haar liefde voor beweging op het web. Ze vertelde
+            dat ze het web waardeert omdat het open is: iedereen kan bijdragen.
+            Tegelijk merkt ze dat haar werk regelmatig gekopieerd wordt, wat
+            haar ertoe heeft aangezet om elk jaar een nieuw portfolio te maken.
+          </p>
+          <p>
+            Haar talk richtte zich op animaties en hoe je die slim kunt toepassen
+            zonder meteen naar JavaScript te grijpen. HTML-elementen zoals
+            <code>&lt;details&gt;</code> en <code>&lt;summary&gt;</code> bieden
+            al een solide basis voor interactie — ze werken ook goed met
+            browsertools zoals Ctrl+F. Het animeren van deze elementen is echter
+            nog lastig: op dit moment ondersteunt alleen Firefox de benodigde
+            techniek daarvoor. Cyd gaf aan het einde ook een korte workshop over
+            het animeren van een popover, waarbij ze verschillende technieken
+            combineerde met een sibling-index. Met verrassend weinig code bouwde
+            ze een robuuste animatie.
+          </p>
+          <p>
+            Binnen onze opleiding is Cyd dé persoon om naartoe te gaan met
+            animatievragen — en die reputatie maakte ze hier meer dan waar.
+            Zelf had ik al eerder met de popover API gewerkt, maar
+            <code>&lt;details&gt;</code> en <code>&lt;summary&gt;</code> zijn
+            elementen die ik nog nauwelijks heb ingezet. Jammer genoeg
+            ondersteunt Chrome een aantal van de animatiefuncties nog niet, dus
+            dat is nog even afwachten.
+          </p>
+
+          <h3>Sara Joy — Whimsica11y</h3>
+          <p>
+            Sara's talk draaide om hoe je beleving overbrengt op een website —
+            verder dan kleurpaletten en lettertypes. Ze liet zien dat zelfs
+            alt-tekst een middel kan zijn om sfeer te scheppen. Niet "een
+            weiland" maar een beschrijving die ook de geur van het gras en het
+            felle zonlicht oproept. Dat geeft plaatjes een extra dimensie,
+            ook voor mensen die ze niet kunnen zien.
+          </p>
+          <p>
+            Sara mist de vroege webdagen, toen persoonlijke websites nog echt
+            persoonlijk waren. Ze stelde ook dat niet elke website perfect
+            hoeft te werken op elk apparaat of voor elke gebruiker — een
+            persoonlijke site is als je eigen huis, en in je huis hoef je ook
+            geen traplift te hebben als je die zelf niet nodig hebt. Die regel
+            geldt uiteraard niet voor commerciële of officiële websites.
+          </p>
+          <p>
+            Dat iemand hardop zegt dat je eigen website niet aan alle
+            toegankelijkheidseisen hoeft te voldoen, was verfrissend om te horen
+            binnen een opleiding waar dat centraal staat. Het idee dat een
+            website een eigen stem kan hebben — zoals de interne stem waarmee je
+            een boek leest — vond ik een mooie metafoor. Alt-tekst die verder
+            gaat dan het letterlijke beeld kan een website voor iedereen rijker
+            maken.
+          </p>
+
+          <h3>Johannes Odland — His Camera</h3>
+          <p>
+            De talk van Johannes was moeilijk te volgen doordat hij zich
+            hoofdzakelijk richtte op een deel van het publiek dat buiten de
+            studentensectie zat. Desondanks wist ik een paar punten op te
+            vangen. Hij praatte over zijn metalen camera — geen plastic onderdelen,
+            dus niets dat kan vergaan. Een apparaat dat is <em>gebouwd om te
+            blijven</em>. Die gedachte koppelde hij aan het web: een website zou
+            zo gemaakt moeten zijn dat ze over twintig jaar nog steeds zou
+            werken. Maar zelfs die camera kan kapotgaan — zijn oplossing was een
+            stukje tape. Zijn quote: <em>"There is nothing more permanent than
+            the temporary."</em>
+          </p>
+          <p>
+            Zijn slotwoord vatte zijn boodschap samen:
+            <em>"The web I want is easier, friendlier, to have a community that
+            still strives."</em> Zolang er mensen zijn die het web blijven
+            bouwen en verbeteren, blijft het bestaan.
+          </p>
+          <p>
+            Het idee dat het web blijft voortbestaan zolang er vraag naar is,
+            vond ik een nuchter maar krachtig inzicht. Nieuwe technologieën
+            kunnen het web uiteindelijk verdringen, maar zolang het meebeweegt
+            met de tijd, zal dat niet snel gebeuren.
+          </p>
+
+          <h3>The Web You Want — Websitethema's</h3>
+          <p>
+            De conferentiewebsite van The Web You Want bestaat uit meerdere
+            visuele thema's, elk gemaakt door een andere ontwerper. Schepp
+            presenteerde zijn versie. De spelregel: alleen CSS, geen JavaScript,
+            aangeleverde HTML. Schepp gebruikte onder andere afbeeldingen in CSS
+            en stijlde het <code>&lt;head&gt;</code>-element — normaal gesproken
+            onzichtbaar — om een menu te maken. Later bleek dat er toch
+            checkboxes in de HTML zaten die hij had kunnen gebruiken, maar over
+            het hoofd had gezien. Een quote van Vasilis bij de website van Sanne
+            bleef me bij: <em>"Who needs drugs when you have CSS."</em>
+          </p>
+          <p>
+            Het deed me sterk denken aan het CSS-vak, waarbij we ook geen
+            JavaScript mochten gebruiken maar wel veel interactie moesten
+            bouwen. De manier waarop Schepp het <code>&lt;head&gt;</code>-element
+            styelde inspireerde me. Het bracht me op het idee om zelf met
+            JavaScript de favicon te animeren — en dat heb ik ook daadwerkelijk
+            gedaan: het personage uit een game die ik eerder ontwierp, laat ik
+            nu rennen in de favicon.
+          </p>
+
+          <h3>Vasilis van Gemert — Studentenwerk</h3>
+          <p>
+            Vasilis opende zijn praatje opnieuw met de zin die ook dag 1
+            bepaalde: <em>The web is for everyone</em>. Daarna liet hij
+            studentenwerk zien, waaronder mijn eigen OctoDad-website — grappig
+            om de reacties van het publiek opnieuw te horen. Later ook werk
+            vanuit HCD, opnieuw deels het mijne. Bijzonder om je eigen werk op
+            een groot scherm te zien.
+          </p>
+          <p>
+            Het werk dat me het meest opviel was dat van Maya: een game die
+            volledig op geluid gebaseerd is, een audio-versie van de klassieke
+            text-based game. Dat concept kende ik nog niet en het verraste me
+            dat er niet eerder zoiets gemaakt is. Ik zie er zeker nog meer
+            mogelijkheden in.
+          </p>
+
+          <h3>Jeremy Keith — The Web You Wanted</h3>
+          <p>
+            Jeremy sloot de dag af met een talk die aanvoelde als een
+            documentaire over de geschiedenis van het web. Hij nam het publiek
+            mee van de vroegste tekstdocumenten, via de komst van afbeeldingen
+            en CSS, tot aan de veranderingen in kleurwaarden en lettertypes.
+            Een punt dat me bijbleef: vroeger ontwierp je voor drie vaste
+            schermformaten. Pas met de komst van smartphones werd duidelijk dat
+            die aanpak niet meer werkte, wat leidde tot percentages,
+            media-queries en uiteindelijk responsive design.
+          </p>
+          <p>
+            Jeremy keek ook vooruit. Nu vrijwel alles wat je kunt bedenken al
+            gebouwd kan worden, is de wensenlijst van het web kleiner en
+            gerichter geworden. Zijn slotcitaat vat dat goed samen:
+            <em>"If you have something wonderful, if you don't defend it, you
+            will lose it."</em> Het web verdient actieve aandacht — niet alleen
+            om het te laten groeien, maar ook om te bewaken wat het waardevol
+            maakt.
+          </p>
+          <p>
+            Dit was voor mij één van de sterkste talks van de dag. Jeremy sprak
+            helder, met een logische opbouw. Te horen hoe codetalen door de
+            jaren heen op elkaar hebben ingegrepen — het ene probleem dat steeds
+            tot een nieuwe oplossing leidde — gaf context aan veel dingen die ik
+            gebruik zonder er verder over na te denken.
+          </p>
+        </li>
+
       </ol>
     </main>
 
     <!-- Footer -->
     <footer>
-      <p>&copy; 2025 Louise Monte · Meesterschap · HvA</p>
+      <p>&copy; 2026 Louise Monte · Meesterschap · HvA</p>
       <nav class="footer-links">
         <a href="index.html">Home</a>
         <a href="doelen.html">Doelen</a>

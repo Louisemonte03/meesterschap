@@ -37,6 +37,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* --- Vak-kaart popup op touch/klik --- */
+  document.querySelectorAll('.vak-kaart').forEach(kaart => {
+    kaart.addEventListener('click', e => {
+      if (window.matchMedia('(hover: none)').matches) {
+        const popup = kaart.querySelector('.vak-popup');
+        if (!popup) return;
+
+        const isOpen = kaart.classList.contains('popup-open');
+
+        document.querySelectorAll('.vak-kaart.popup-open').forEach(k => k.classList.remove('popup-open'));
+
+        if (!isOpen) {
+          kaart.classList.add('popup-open');
+          e.preventDefault();
+        }
+      }
+    });
+  });
+
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.vak-kaart')) {
+      document.querySelectorAll('.vak-kaart.popup-open').forEach(k => k.classList.remove('popup-open'));
+    }
+  });
+
   /* --- Actieve navigatielink markeren --- */
   const huidigePagina = location.pathname.split('/').pop() || 'index.html';
 

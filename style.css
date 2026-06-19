@@ -41,6 +41,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -495,8 +499,29 @@ img {
 }
 
 /* --- Reflectie --- */
+@keyframes highlight-section {
+  0%   { background-color: transparent; }
+  20%  { background-color: color-mix(in srgb, var(--accent) 15%, transparent); }
+  100% { background-color: transparent; }
+}
+
 .reflectie-blok {
   margin-bottom: 48px;
+  scroll-margin-top: 80px;
+  border-radius: 10px;
+  padding: 4px 12px;
+}
+
+.reflectie-doelen {
+  margin-top: 32px;
+  padding: 24px 28px;
+  background-color: var(--card);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+}
+
+.reflectie-blok:target {
+  animation: highlight-section 2s ease-out forwards;
 }
 
 .reflectie-blok h2 {
@@ -552,7 +577,7 @@ img {
 
 .vakken-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -560,35 +585,109 @@ img {
   display: block;
   border-radius: 14px;
   overflow: hidden;
-  border: 2px solid var(--border);
-  background-color: var(--card);
+  border: none;
+  background-color: transparent;
+  position: relative;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.08),
+    0 8px 24px rgba(0, 0, 0, 0.06);
   transition:
     transform 0.2s,
-    box-shadow 0.2s,
-    border-color 0.2s;
+    box-shadow 0.2s;
 }
 
 .vak-kaart:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
-  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.1),
+    0 16px 40px rgba(0, 0, 0, 0.1);
 }
 
 .vak-kaart img,
 .vak-kaart .vak-video {
   width: 100%;
-  aspect-ratio: 2 / 1;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  background-color: var(--border);
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.vak-kaart:hover img,
+.vak-kaart:hover .vak-video {
+  transform: scale(1.05);
 }
 
 .vak-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 14px 12px;
+  background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 100%);
   display: flex;
-  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.vak-naam {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+.vak-popup {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 14px 16px;
-  gap: 8px;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-radius: 14px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.vak-kaart:hover .vak-popup,
+.vak-kaart.popup-open .vak-popup {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-knop {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 980px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.92);
+  color: #111;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s, transform 0.15s;
+}
+
+.popup-knop:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.03);
+}
+
+.popup-knop-leeg {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.popup-knop-leeg:hover {
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .vak-naam {
