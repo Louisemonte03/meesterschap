@@ -247,18 +247,15 @@ img {
   aspect-ratio: 3 / 4;
   max-height: 520px;
   border-radius: 20px;
-  border: 2px dashed var(--border);
-  background-color: var(--card);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  color: var(--muted);
-  font-size: 13px;
-  transition:
-    background-color 0.3s,
-    border-color 0.3s;
+  overflow: hidden;
+}
+
+.hero-illustratie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
 }
 
 /* Meta-balk onderaan hero */
@@ -832,19 +829,32 @@ hr {
 
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 48px 24px;
+    gap: 32px;
+    padding: 32px 20px 40px;
   }
 
   .hero-illustratie {
-    aspect-ratio: 4 / 3;
-    max-height: 280px;
+    aspect-ratio: 3 / 4;
+    max-height: 420px;
+    width: 100%;
+  }
+
+  .hero-illustratie img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
   }
 
   .hero-meta {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    padding: 20px;
   }
+}
+
+.card strong {
+  color: #000;
 }
 
 @media (max-width: 480px) {
